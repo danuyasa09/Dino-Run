@@ -1,0 +1,58 @@
+<!-- Halaman utama untuk permainan Dino Runner -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Pengaturan standar untuk metadata halaman -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Runner Game</title>
+    <!-- Menghubungkan ke file CSS utama untuk styling game -->
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <!-- Kontainer utama yang membungkus semua elemen visual game -->
+    <div class="game-container">
+        
+        <!-- Panel statistik di bagian atas (Skor, Waktu, High Score) -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Skor</span>
+                <span id="score">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Waktu</span>
+                <span id="time">0.0s</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">High Score</span>
+                <span id="highScore">0</span> <!-- High score pribadi pemain saat ini -->
+            </div>
+        </div>
+        
+        <!-- Elemen <canvas> adalah tempat semua grafis game akan digambar oleh JavaScript -->
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <!-- Panel instruksi di bagian bawah -->
+        <div class="instructions">
+            <strong>Tekan SPASI atau klik untuk melompat</strong> | Hindari rintangan!
+        </div>
+
+        <!-- Panel "Game Over" yang awalnya tersembunyi (display: none di CSS) -->
+        <div class="game-over" id="gameOver">
+            <h2>GAME OVER!</h2>
+            <p>Skor Akhir: <span id="finalScore">0</span></p>
+            <p>Waktu Bermain: <span id="finalTime">0</span>s</p>
+            <!-- Kontainer untuk tombol-tombol di layar game over -->
+            <div class="game-over-buttons">
+                <!-- Tombol ini memanggil fungsi restartGame() dari game.js -->
+                <button onclick="restartGame()">Main Lagi</button>
+                <!-- Tautan ini berfungsi sebagai tombol untuk kembali ke halaman menu -->
+                <a href="startpage.html" class="menu-btn">Kembali ke Menu</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Menghubungkan file JavaScript utama yang berisi semua logika game -->
+    <script src="game.js"></script>
+</body>
+</html>

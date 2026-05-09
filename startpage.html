@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulai Game Dino</title>
+    <link rel="stylesheet" href="start-page.css">
+</head>
+<body>
+    <!-- Clouds -->
+    <div class="clouds">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+    </div>
+
+    <!-- Stars -->
+    <div class="stars" id="stars-container"></div>
+
+    <div class="container">
+        <main class="start-panel">
+            <div class="dino-decoration">
+                <img src="assets/dino.png" alt="Dino Character">
+            </div>
+            
+            <div class="start-content">
+                <h1>DINO RUN</h1>
+                <p>Masukkan namamu dan raih skor tertinggi!</p>
+                
+                <div id="start-form">
+                    <div class="input-group">
+                        <label for="username-input">Username</label>
+                        <input type="text" id="username-input" placeholder="Player1" required>
+                    </div>
+                    <button type="button" class="start-button" id="start-btn">Mulai Bermain</button>
+                </div>
+            </div>
+        </main>
+        
+        <aside class="leaderboard-panel">
+            <h2>🏆 Leaderboard 🏆</h2>
+            <ol id="leaderboard-list">
+                <li>
+                    <span class="rank">1.</span>
+                    <span class="username">Belum ada data</span>
+                    <span class="score">0</span>
+                </li>
+            </ol>
+        </aside>
+    </div>
+
+    <div class="ground-decoration">
+        <div class="ground-pattern"></div>
+    </div>
+
+    <script src="start.js"></script>
+</body>
+</html>
